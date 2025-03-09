@@ -1,0 +1,29 @@
+.editor-toggle {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.toggle-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.toggle-button.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.toggle-button:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+} 

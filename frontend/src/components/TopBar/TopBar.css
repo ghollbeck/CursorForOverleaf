@@ -1,0 +1,200 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  background-color: #1e2530;
+  color: white;
+  padding: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.topbar-left, 
+.topbar-center, 
+.topbar-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.topbar-left {
+  gap: 10px;
+  padding-left: 10px;
+}
+
+.topbar-center {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.topbar-right {
+  gap: 8px;
+  padding-right: 10px;
+}
+
+.project-name {
+  font-size: 14px;
+  color: #ccc;
+  margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+/* Menu Button */
+.menu-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Home Button */
+.home-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.home-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Editor Toggle */
+.editor-toggle {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.toggle-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.toggle-button.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.toggle-button:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.action-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.compile-button {
+  background-color: #4caf50;
+}
+
+.compile-button:hover:not(:disabled) {
+  background-color: #43a047;
+}
+
+.review-button {
+  background-color: #4caf50;
+}
+
+.review-button:hover {
+  background-color: #43a047;
+}
+
+.share-button {
+  background: none;
+}
+
+.submit-button {
+  background: #2196f3;
+}
+
+.submit-button:hover {
+  background-color: #1e88e5;
+}
+
+.history-button, .layout-button {
+  background: none;
+}
+
+/* Chat Button */
+.chat-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  margin-left: 10px;
+}
+
+.chat-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.chat-text {
+  font-size: 14px;
+  font-weight: 500;
+} 

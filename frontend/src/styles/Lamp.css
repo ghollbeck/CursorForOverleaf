@@ -1,0 +1,260 @@
+.lamp-container {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #020617;
+  width: 100%;
+  border-radius: 0.375rem;
+  z-index: 0;
+}
+
+.lamp-inner-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  transform: scaleY(1.25);
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+  z-index: 0;
+}
+
+.lamp-left {
+  position: absolute;
+  inset: auto;
+  right: 50%;
+  height: 14rem;
+  overflow: visible;
+  width: 15rem;
+  opacity: 0.5;
+  background-image: conic-gradient(from 70deg at center top, #06b6d4, transparent, transparent);
+  color: white;
+  transition:
+    opacity 0.8s ease-in-out,
+    width 0.8s ease-in-out;
+}
+
+.lamp-right {
+  position: absolute;
+  inset: auto;
+  left: 50%;
+  height: 14rem;
+  width: 15rem;
+  opacity: 0.5;
+  background-image: conic-gradient(from 290deg at center top, transparent, transparent, #06b6d4);
+  color: white;
+  transition:
+    opacity 0.8s ease-in-out,
+    width 0.8s ease-in-out;
+}
+
+.lamp-mask-bottom {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-color: #020617;
+  height: 10rem;
+  bottom: 0;
+  z-index: 20;
+  mask-image: linear-gradient(to top, white, transparent);
+  -webkit-mask-image: linear-gradient(to top, white, transparent);
+}
+
+.lamp-mask-left {
+  position: absolute;
+  width: 10rem;
+  height: 100%;
+  left: 0;
+  background-color: #020617;
+  bottom: 0;
+  z-index: 20;
+  mask-image: linear-gradient(to right, white, transparent);
+  -webkit-mask-image: linear-gradient(to right, white, transparent);
+}
+
+.lamp-mask-right {
+  position: absolute;
+  width: 10rem;
+  height: 100%;
+  right: 0;
+  background-color: #020617;
+  bottom: 0;
+  z-index: 20;
+  mask-image: linear-gradient(to left, white, transparent);
+  -webkit-mask-image: linear-gradient(to left, white, transparent);
+}
+
+.lamp-shadow {
+  position: absolute;
+  top: 50%;
+  height: 12rem;
+  width: 100%;
+  transform: translateY(3rem) scaleX(1.5);
+  background-color: #020617;
+  filter: blur(0.5rem);
+}
+
+.lamp-blur {
+  position: absolute;
+  top: 50%;
+  z-index: 50;
+  height: 12rem;
+  width: 100%;
+  background-color: transparent;
+  opacity: 0.1;
+  backdrop-filter: blur(0.25rem);
+}
+
+.lamp-glow {
+  position: absolute;
+  inset: auto;
+  z-index: 50;
+  height: 9rem;
+  width: 28rem;
+  transform: translateY(-50%);
+  border-radius: 9999px;
+  background-color: #06b6d4;
+  opacity: 0.8;
+  filter: blur(4rem);
+}
+
+.lamp-center {
+  position: absolute;
+  inset: auto;
+  z-index: 30;
+  height: 9rem;
+  width: 8rem;
+  transform: translateY(-6rem);
+  border-radius: 9999px;
+  background-color: #22d3ee;
+  filter: blur(0.5rem);
+  transition: width 0.8s ease-in-out;
+}
+
+.lamp-line {
+  position: absolute;
+  inset: auto;
+  z-index: 50;
+  height: 0.125rem;
+  width: 15rem;
+  transform: translateY(-7rem);
+  background-color: #22d3ee;
+  transition: width 0.8s ease-in-out;
+}
+
+.lamp-top-mask {
+  position: absolute;
+  inset: auto;
+  z-index: 40;
+  height: 11rem;
+  width: 100%;
+  transform: translateY(-12.6rem);
+  background-color: #020617;
+}
+
+.lamp-content {
+  position: relative;
+  z-index: 50;
+  display: flex;
+  transform: translateY(-20rem);
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.25rem;
+}
+
+.lamp-title {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  background-image: linear-gradient(to bottom right, #cbd5e1, #64748b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0.5;
+  transform: translateY(6.25rem);
+  transition:
+    opacity 0.8s ease-in-out,
+    transform 0.8s ease-in-out;
+}
+
+.lamp-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .lamp-title {
+    font-size: 4.5rem;
+  }
+}
+
+/* Dark theme styles for higher contrast */
+.dark-theme-lamp .lamp-glow {
+  background-color: #0bf5f5; /* Amber color for more contrast */
+  opacity: 0.9;
+  filter: blur(3rem);
+}
+
+.dark-theme-lamp .lamp-center {
+  background-color: #16eaf9; /* Orange color */
+  filter: blur(0.3rem);
+}
+
+.dark-theme-lamp .lamp-line {
+  background-color: #3cebfb; /* Light orange */
+  height: 0.18rem; /* Slightly thicker line */
+}
+
+.dark-theme-lamp .lamp-left {
+  background-image: conic-gradient(from 70deg at center top, #0bf5e2, transparent, transparent);
+}
+
+.dark-theme-lamp .lamp-right {
+  background-image: conic-gradient(from 290deg at center top, transparent, transparent, #0bf5e9);
+}
+
+.dark-theme-lamp .lamp-mask-bottom,
+.dark-theme-lamp .lamp-mask-left,
+.dark-theme-lamp .lamp-mask-right,
+.dark-theme-lamp .lamp-top-mask,
+.dark-theme-lamp .lamp-shadow {
+  background-color: #0f172a; /* Darker background */
+}
+
+.dark-theme-lamp.lamp-container {
+  background-color: #0f172a; /* Darker background */
+}
+
+.dark-theme-title {
+  background-image: linear-gradient(to bottom right, #ffffff, #ffffff) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 20px rgba(36, 226, 251, 0.2);
+}
+
+/* Add a subtle glow effect to the title */
+.dark-theme-title {
+  animation: title-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes title-glow {
+  from {
+    text-shadow: 0 0 10px rgba(36, 251, 222, 0.2);
+  }
+  to {
+    text-shadow:
+      0 0 20px rgba(36, 251, 240, 0.4),
+      0 0 30px rgba(36, 229, 251, 0.2);
+  }
+}

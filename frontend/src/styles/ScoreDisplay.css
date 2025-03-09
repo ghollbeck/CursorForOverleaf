@@ -1,0 +1,96 @@
+.score-display-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* Score Bar Styles */
+.score-section {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.score-bar-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.score-value {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.score-bar {
+  height: 30px;
+  background-color: #a2a2a2;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.score-fill {
+  height: 100%;
+  border-radius: 15px;
+  transition: width 1s ease-in-out;
+}
+
+.score-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+  font-size: 14px;
+}
+
+.score-feedback {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #dcdcdc;
+  color: #000;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .score-display-container {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .score-value {
+    font-size: 30px;
+  }
+
+  .score-labels span {
+    font-size: 12px;
+  }
+}
