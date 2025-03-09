@@ -3,6 +3,11 @@
 
 A modern web application that provides an interactive LaTeX editing environment with real-time compilation, PDF preview, and AI-powered assistance.
 
+
+
+
+<img width="1338" alt="image" src="https://github.com/user-attachments/assets/73e46cae-fce4-4318-9973-7ff0f1bdf7d4" />
+
 ## Features
 
 - **Interactive LaTeX Editor**: Write and edit LaTeX documents with syntax highlighting
